@@ -15,23 +15,25 @@
             background: white;
             width: 210mm;
             min-height: 297mm;
-            padding: 10mm 15mm 15mm 15mm;
+            padding: 12mm 18mm 15mm 18mm;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
             box-sizing: border-box;
             position: relative;
         }
+        /* الجمهورية الجزائرية الديمقراطية الشعبية */
         .republic-header {
             text-align: center;
             font-size: 16pt;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
+        /* الترويسة يمين ويسار */
         .header-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .header-right {
             text-align: right;
@@ -45,12 +47,14 @@
             font-weight: bold;
             line-height: 1.5;
         }
+        /* الموضوع */
         .subject-title {
             text-align: center;
             font-size: 15pt;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 20px 0 15px 0;
         }
+        /* النص التمهيدي */
         .content-text {
             font-size: 13pt;
             font-weight: bold;
@@ -58,20 +62,20 @@
             margin-bottom: 15px;
             text-align: right;
         }
-        /* تصميم الجدول ليكون مطابقاً للصورة تماماً (خانَت ضيقة وارتفاع صغير) */
+        /* الجدول: الرقم على اليمين، العتاد في الوسط، الكمية على اليسار */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
         th, td {
             border: 1px solid #000;
-            padding: 3px 5px; /* تقليص الحشوة الداخلية لتصغير حجم الخانات تماماً كالورد */
+            padding: 4px 6px;
             text-align: center;
-            font-size: 12pt;
+            font-size: 13pt;
             font-weight: bold;
-            height: 22px; /* تحديد ارتفاع صغير وموحد للخانات */
+            height: 26px;
         }
         th {
             background-color: #f9f9f9;
@@ -82,18 +86,18 @@
             background: transparent;
             text-align: center;
             font-family: inherit;
-            font-size: 12pt;
+            font-size: 13pt;
             font-weight: normal;
             outline: none;
         }
         td input:focus {
             background-color: #fffde7;
         }
-        /* المسافات بدقة مطابقة لأسفل الجدول والتوقيعات */
+        /* التوقيعات تحت الجدول مباشرة كما في الصورة تماماً */
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 25px; /* ضبط المسافة تماماً كما في صورة الوورد */
+            margin-top: 8px;
             font-size: 13pt;
             font-weight: bold;
         }
@@ -162,77 +166,77 @@
         يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه :
     </div>
 
-    <!-- الجدول بـ 3 أعمدة (الكمية - العتاد - الرقم) تماماً مثل الوورد و 11 صفاً -->
+    <!-- الجدول: الرقم (يمين) - العتاد (وسط) - الكمية (يسار) -->
     <table>
         <thead>
             <tr>
-                <th style="width: 20%;">الكمية</th>
-                <th style="width: 65%;">العتاد</th>
-                <th style="width: 15%;">الرقم</th>
+                <th style="width: 12%;">الرقم</th>
+                <th style="width: 63%;">العتاد</th>
+                <th style="width: 25%;">الكمية</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>01</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>02</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>03</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>04</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>05</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>06</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>07</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>08</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>09</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>10</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
             <tr>
-                <td><input type="text" placeholder=""></td>
-                <td><input type="text" placeholder=""></td>
                 <td>11</td>
+                <td><input type="text" placeholder=""></td>
+                <td><input type="text" placeholder=""></td>
             </tr>
         </tbody>
     </table>
 
     <div class="footer-signatures">
-        <div>الجهة المستلمة:</div>
         <div>الجهة المسلمة:</div>
+        <div>الجهة المستلمة:</div>
     </div>
 </div>
 
