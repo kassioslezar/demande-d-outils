@@ -21,34 +21,34 @@
             box-sizing: border-box;
             position: relative;
         }
-        .header {
+        /* العبارة في الأعلى تماماً وفي المنتصف بحجم 15pt */
+        .republic-header {
             text-align: center;
-            line-height: 1.6;
-            font-size: 14px;
+            font-size: 15pt;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        .header-left {
-            float: left;
+        /* العبارات في يمين الورقة بحجم 12pt */
+        .ministry-header {
             text-align: right;
-            font-size: 13px;
-            line-height: 1.5;
-        }
-        .clear {
-            clear: both;
+            font-size: 12pt;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
         .title {
             text-align: center;
-            font-size: 20px;
+            font-size: 18pt;
             font-weight: bold;
-            margin: 25px 0;
+            margin: 30px 0 25px 0;
             text-decoration: underline;
         }
         .content-text {
-            font-size: 16px;
+            font-size: 14pt;
             line-height: 2;
             margin-bottom: 20px;
-            text-align: justify;
+            text-align: right;
+            font-weight: normal;
         }
         table {
             width: 100%;
@@ -60,7 +60,7 @@
             border: 1px solid #000;
             padding: 8px;
             text-align: center;
-            font-size: 14px;
+            font-size: 12pt;
         }
         th {
             background-color: #f9f9f9;
@@ -71,7 +71,7 @@
             background: transparent;
             text-align: center;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 12pt;
             outline: none;
         }
         td input:focus {
@@ -80,8 +80,8 @@
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 50px;
-            font-size: 16px;
+            margin-top: 60px;
+            font-size: 14pt;
             font-weight: bold;
         }
         .print-btn {
@@ -125,15 +125,17 @@
 <button class="print-btn" onclick="window.print()">طباعة الاستمارة</button>
 
 <div class="page">
-    <div class="header">
+    <!-- العبارة الأولى في الأعلى وفي المنتصف -->
+    <div class="republic-header">
         الجمهورية الجزائرية الديمقراطية الشعبية
-        <div class="header-left">
-            وزارة التعليم العالي والبحث العلمي<br>
-            الديوان الوطني للخدمات الجامعية<br>
-            مديرية الخدمات الجامعية - ميلة -<br>
-            الإقامة الجامعية حيور عمار ميلة
-        </div>
-        <div class="clear"></div>
+    </div>
+
+    <!-- العبارات التابعة في اليمين تحت العبارة الأولى -->
+    <div class="ministry-header">
+        وزارة التعليم العالي والبحث العلمي<br>
+        الديوان الوطني للخدمات الجامعية<br>
+        مديرية الخدمات الجامعية - ميلة -<br>
+        الإقامة الجامعية حيور عمار ميلة
     </div>
 
     <div class="title">طلب احتياجات الإقامة الجامعية حيور عمار -ميلة</div>
