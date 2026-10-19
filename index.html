@@ -28,61 +28,58 @@
             position: relative;
             overflow: hidden;
         }
-        /* الجمهورية الجزائرية الديمقراطية الشعبية */
+        /* الجمهورية الجزائرية في الأعلى تماماً وموسطة */
         .republic-header {
             text-align: center;
             font-size: 15pt;
             font-weight: bold;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-        /* الترويسة الأفقية (يمين ويسار) */
-        .header-row {
+        /* ترويسة متطابقة لملف الورد (يمين ويسار في نفس السطر) */
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-size: 11pt;
+            font-weight: bold;
+            line-height: 1.5;
         }
         .header-right {
             text-align: right;
-            font-size: 12pt;
-            font-weight: bold;
-            line-height: 1.5;
         }
         .header-left {
             text-align: left;
-            font-size: 12pt;
-            font-weight: bold;
-            line-height: 1.5;
         }
         /* الموضوع */
         .subject-title {
             text-align: center;
-            font-size: 14pt;
+            font-size: 13pt;
             font-weight: bold;
-            margin: 25px 0 20px 0;
+            margin: 20px 0 15px 0;
         }
         /* نص الطلب */
         .content-text {
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: right;
         }
-        /* الجدول من 3 أعمدة و11 صفاً */
+        /* الجدول: الرقم - العتاد - الكمية */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         th, td {
             border: 1px solid #000;
-            padding: 5px 8px;
+            padding: 4px 6px;
             text-align: center;
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
-            height: 30px;
+            height: 24px;
         }
         th {
             background-color: #ffffff;
@@ -94,20 +91,21 @@
             background: transparent;
             text-align: center;
             font-family: inherit;
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: normal;
             outline: none;
         }
         td input:focus {
             background-color: #fffde7;
         }
-        /* التوقيعات أسفل الجدول */
+        /* التوقيعات أسفل الجدول (الجهة المسلمة / مدير الإقامة) */
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 15px;
+            margin-top: 25px;
             font-size: 12pt;
             font-weight: bold;
+            padding: 0 10px;
         }
         /* زر الطباعة */
         .print-btn {
@@ -154,7 +152,7 @@
         الجمهورية الجزائرية الديمقراطية الشعبية
     </div>
 
-    <div class="header-row">
+    <div class="header-container">
         <div class="header-right">
             وزارة التعليم العالي والبحث العلمي<br>
             الديوان الوطني للخدمات الجامعية<br>
@@ -171,15 +169,15 @@
     </div>
 
     <div class="content-text">
-        يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه :
+        يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه:
     </div>
 
-    <!-- الجدول بـ 11 خاناً مطابقاً تماماً لصورة الوورد -->
+    <!-- الجدول بـ 10 صفوف مطابقة لملف الورد[cite: 8] -->
     <table>
         <thead>
             <tr>
                 <th style="width: 15%;">الرقم</th>
-                <th style="width: 60%;">العتاد</th>
+                <th style="width: 60%;">العتــاد</th>
                 <th style="width: 25%;">الكمية</th>
             </tr>
         </thead>
@@ -194,13 +192,12 @@
             <tr><td>08</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
             <tr><td>09</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
             <tr><td>10</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
-            <tr><td>11</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
         </tbody>
     </table>
 
     <div class="footer-signatures">
         <div>الجهة المسلمة:</div>
-        <div>الجهة المستلمة:</div>
+        <div>مدير الإقامة:</div>
     </div>
 </div>
 
