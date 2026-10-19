@@ -5,7 +5,7 @@
     <title>طلب احتياجات الإقامة الجامعية حيور عمار - ميلة</title>
     <style>
         body {
-            font-family: 'Amiri', 'Traditional Arabic', Arial, sans-serif;
+            font-family: 'Traditional Arabic', 'Amiri', Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
@@ -15,41 +15,54 @@
             background: white;
             width: 210mm;
             min-height: 297mm;
-            padding: 15mm 20mm;
+            padding: 10mm 15mm 15mm 15mm; /* تقليل الهامش العلوي لتكون الترويسة في الأعلى تماماً */
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
             box-sizing: border-box;
             position: relative;
         }
-        /* العبارة في الأعلى تماماً وفي المنتصف بحجم 15pt */
+        /* الجمهورية الجزائرية في الأعلى تماماً وفي المنتصف */
         .republic-header {
             text-align: center;
-            font-size: 15pt;
+            font-size: 16pt;
             font-weight: bold;
-            margin-bottom: 15px;
-        }
-        /* العبارات في يمين الورقة بحجم 12pt */
-        .ministry-header {
-            text-align: right;
-            font-size: 12pt;
-            font-weight: bold;
-            line-height: 1.6;
             margin-bottom: 25px;
         }
-        .title {
-            text-align: center;
-            font-size: 18pt;
-            font-weight: bold;
-            margin: 30px 0 25px 0;
-            text-decoration: underline;
+        /* قسم الترويسة المكون من جانبين (يمين ويسار) */
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
+        .header-right {
+            text-align: right;
+            font-size: 13pt;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        .header-left {
+            text-align: left;
+            font-size: 13pt;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        /* الموضوع في المنتصف */
+        .subject-title {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+        /* النص التمهيدي */
         .content-text {
             font-size: 14pt;
-            line-height: 2;
+            font-weight: bold;
+            line-height: 1.8;
             margin-bottom: 20px;
             text-align: right;
-            font-weight: normal;
         }
+        /* الجدول من 3 أعمدة كما في الصورة */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -60,7 +73,8 @@
             border: 1px solid #000;
             padding: 8px;
             text-align: center;
-            font-size: 12pt;
+            font-size: 13pt;
+            font-weight: bold;
         }
         th {
             background-color: #f9f9f9;
@@ -71,7 +85,8 @@
             background: transparent;
             text-align: center;
             font-family: inherit;
-            font-size: 12pt;
+            font-size: 13pt;
+            font-weight: normal;
             outline: none;
         }
         td input:focus {
@@ -80,7 +95,7 @@
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 60px;
+            margin-top: 50px;
             font-size: 14pt;
             font-weight: bold;
         }
@@ -125,32 +140,41 @@
 <button class="print-btn" onclick="window.print()">طباعة الاستمارة</button>
 
 <div class="page">
-    <!-- العبارة الأولى في الأعلى وفي المنتصف -->
+    <!-- العبارة العلويّة الموسطة -->
     <div class="republic-header">
         الجمهورية الجزائرية الديمقراطية الشعبية
     </div>
 
-    <!-- العبارات التابعة في اليمين تحت العبارة الأولى -->
-    <div class="ministry-header">
-        وزارة التعليم العالي والبحث العلمي<br>
-        الديوان الوطني للخدمات الجامعية<br>
-        مديرية الخدمات الجامعية - ميلة -<br>
-        الإقامة الجامعية حيور عمار ميلة
+    <!-- الترويسة المزدوجة (يمين ويسار) -->
+    <div class="header-row">
+        <div class="header-right">
+            وزارة التعليم العالي والبحث العلمي<br>
+            الديوان الوطني للخدمات الجامعية<br>
+            مديرية الخدمات الجامعية – ميلة<br>
+            الإقامة الجامعية حيور عمار ميلة
+        </div>
+        <div class="header-left">
+            إلى السيد: مدير الخدمات الجامعية - ميلة -
+        </div>
     </div>
 
-    <div class="title">طلب احتياجات الإقامة الجامعية حيور عمار -ميلة</div>
+    <!-- الموضوع -->
+    <div class="subject-title">
+        الموضوع: طلب احتياجات الإقامة الجامعية حيور عمار - ميلة -
+    </div>
 
+    <!-- نص الطلب -->
     <div class="content-text">
-        يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه:
+        يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه :
     </div>
 
+    <!-- جدول من 3 أعمدة فقط (الرقم - العتاد - الكمية) -->
     <table>
         <thead>
             <tr>
-                <th style="width: 10%;">الرقم</th>
-                <th style="width: 45%;">تعيين العتاد</th>
-                <th style="width: 20%;">الكمية</th>
-                <th style="width: 25%;">الملاحظة</th>
+                <th style="width: 15%;">الرقم</th>
+                <th style="width: 60%;">العتاد</th>
+                <th style="width: 25%;">الكمية</th>
             </tr>
         </thead>
         <tbody>
@@ -158,11 +182,9 @@
                 <td>01</td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
-                <td><input type="text" placeholder="..."></td>
             </tr>
             <tr>
                 <td>02</td>
-                <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
             </tr>
@@ -170,11 +192,9 @@
                 <td>03</td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
-                <td><input type="text" placeholder="..."></td>
             </tr>
             <tr>
                 <td>04</td>
-                <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
             </tr>
@@ -182,11 +202,9 @@
                 <td>05</td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
-                <td><input type="text" placeholder="..."></td>
             </tr>
             <tr>
                 <td>06</td>
-                <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
             </tr>
@@ -194,11 +212,9 @@
                 <td>07</td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
-                <td><input type="text" placeholder="..."></td>
             </tr>
             <tr>
                 <td>08</td>
-                <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
             </tr>
@@ -206,11 +222,9 @@
                 <td>09</td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
-                <td><input type="text" placeholder="..."></td>
             </tr>
             <tr>
                 <td>10</td>
-                <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
                 <td><input type="text" placeholder="..."></td>
             </tr>
