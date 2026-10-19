@@ -22,28 +22,30 @@
             background: white;
             width: 210mm;
             height: 297mm;
-            padding: 15mm 20mm;
+            padding: 18mm 20mm;
             margin: 0 auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        /* الجمهورية الجزائرية في الأعلى تماماً وموسطة */
+        /* الجمهورية الجزائرية الديمقراطية الشعبية */
         .republic-header {
             text-align: center;
-            font-size: 15pt;
+            font-size: 16pt;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        /* ترويسة متطابقة لملف الورد (يمين ويسار في نفس السطر) */
+        /* الترويسة الأفقية (يمين ويسار) */
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 25px;
-            font-size: 11pt;
+            margin-bottom: 30px;
+            font-size: 12pt;
             font-weight: bold;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         .header-right {
             text-align: right;
@@ -54,35 +56,36 @@
         /* الموضوع */
         .subject-title {
             text-align: center;
-            font-size: 13pt;
+            font-size: 14pt;
             font-weight: bold;
-            margin: 20px 0 15px 0;
+            margin: 15px 0 20px 0;
         }
         /* نص الطلب */
         .content-text {
-            font-size: 11pt;
+            font-size: 12pt;
             font-weight: bold;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
             text-align: right;
         }
-        /* الجدول: الرقم - العتاد - الكمية */
+        /* الجدول وتمطيطه لملء الورقة بتناسق */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 5px;
             margin-bottom: 20px;
         }
         th, td {
             border: 1px solid #000;
-            padding: 4px 6px;
+            padding: 6px 8px;
             text-align: center;
-            font-size: 11pt;
+            font-size: 12pt;
             font-weight: bold;
-            height: 24px;
+            height: 38px; /* زيادة ارتفاع الخانات لتشغل المساحة المتبقية */
         }
         th {
             background-color: #ffffff;
+            height: 35px;
         }
         /* حقول الإدخال القابلة للتعديل داخل الخانات */
         td input {
@@ -91,21 +94,22 @@
             background: transparent;
             text-align: center;
             font-family: inherit;
-            font-size: 11pt;
+            font-size: 12pt;
             font-weight: normal;
             outline: none;
         }
         td input:focus {
             background-color: #fffde7;
         }
-        /* التوقيعات أسفل الجدول (الجهة المسلمة / مدير الإقامة) */
+        /* التوقيعات في أسفل الصفحة */
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 25px;
-            font-size: 12pt;
+            margin-top: auto; /* دفع التوقيعات لأسفل الورقة */
+            margin-bottom: 15mm;
+            font-size: 13pt;
             font-weight: bold;
-            padding: 0 10px;
+            padding: 0 15px;
         }
         /* زر الطباعة */
         .print-btn {
@@ -135,7 +139,7 @@
                 margin: 0;
                 width: 210mm;
                 height: 297mm;
-                padding: 15mm 20mm;
+                padding: 18mm 20mm;
             }
             .print-btn {
                 display: none;
@@ -172,7 +176,6 @@
         يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه:
     </div>
 
-    <!-- الجدول بـ 10 صفوف مطابقة لملف الورد[cite: 8] -->
     <table>
         <thead>
             <tr>
@@ -197,7 +200,7 @@
 
     <div class="footer-signatures">
         <div>الجهة المسلمة:</div>
-        <div>مدير الإقامة:</div>
+        <div>مدير الإقامـة:</div>
     </div>
 </div>
 
