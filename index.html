@@ -4,84 +4,91 @@
     <meta charset="UTF-8">
     <title>طلب احتياجات الإقامة الجامعية حيور عمار - ميلة</title>
     <style>
-        body {
-            font-family: 'Traditional Arabic', 'Amiri', Arial, sans-serif;
-            background-color: #f0f0f0;
+        @page {
+            size: A4 portrait;
             margin: 0;
-            padding: 20px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, 'Traditional Arabic', 'Amiri', sans-serif;
+            background-color: #525659;
+            margin: 0;
+            padding: 20px 0;
             direction: rtl;
         }
         .page {
             background: white;
             width: 210mm;
-            min-height: 297mm;
-            padding: 8mm 15mm 10mm 15mm;
+            height: 297mm;
+            padding: 15mm 20mm;
             margin: 0 auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.15);
-            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
             position: relative;
+            overflow: hidden;
         }
         /* الجمهورية الجزائرية الديمقراطية الشعبية */
         .republic-header {
             text-align: center;
             font-size: 15pt;
             font-weight: bold;
-            margin-bottom: 18px;
+            margin-bottom: 25px;
         }
-        /* الترويسة يمين ويسار */
+        /* الترويسة الأفقية (يمين ويسار) */
         .header-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 18px;
+            margin-bottom: 30px;
         }
         .header-right {
             text-align: right;
             font-size: 12pt;
             font-weight: bold;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         .header-left {
             text-align: left;
             font-size: 12pt;
             font-weight: bold;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         /* الموضوع */
         .subject-title {
             text-align: center;
             font-size: 14pt;
             font-weight: bold;
-            margin: 15px 0 10px 0;
+            margin: 25px 0 20px 0;
         }
-        /* النص التمهيدي */
+        /* نص الطلب */
         .content-text {
             font-size: 12pt;
             font-weight: bold;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            line-height: 1.6;
+            margin-bottom: 20px;
             text-align: right;
         }
-        /* الجدول تفاعلي وقابل للكتابة */
+        /* الجدول من 3 أعمدة و11 صفاً */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 5px;
-            margin-bottom: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
         }
         th, td {
             border: 1px solid #000;
-            padding: 2px 4px;
+            padding: 5px 8px;
             text-align: center;
             font-size: 12pt;
             font-weight: bold;
-            height: 22px;
+            height: 30px;
         }
         th {
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
-        /* حقول الإدخال لتجعل الخانات قابلة للتعديل والكتابة بكل أريحية */
-        td input, td span[contenteditable="true"] {
+        /* حقول الإدخال القابلة للتعديل داخل الخانات */
+        td input {
             width: 100%;
             border: none;
             background: transparent;
@@ -90,20 +97,19 @@
             font-size: 12pt;
             font-weight: normal;
             outline: none;
-            display: block;
-            box-sizing: border-box;
         }
-        td input:focus, td span[contenteditable="true"]:focus {
+        td input:focus {
             background-color: #fffde7;
         }
-        /* التوقيعات تحت الجدول مباشرة */
+        /* التوقيعات أسفل الجدول */
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 8px;
+            margin-top: 15px;
             font-size: 12pt;
             font-weight: bold;
         }
+        /* زر الطباعة */
         .print-btn {
             position: fixed;
             top: 20px;
@@ -115,17 +121,13 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             z-index: 1000;
         }
         .print-btn:hover {
             background-color: #115293;
         }
         @media print {
-            @page {
-                size: A4;
-                margin: 0;
-            }
             body {
                 background: none;
                 padding: 0;
@@ -133,9 +135,9 @@
             .page {
                 box-shadow: none;
                 margin: 0;
-                width: 100%;
-                min-height: 100vh;
-                padding: 10mm 15mm;
+                width: 210mm;
+                height: 297mm;
+                padding: 15mm 20mm;
             }
             .print-btn {
                 display: none;
@@ -172,29 +174,27 @@
         يشرفني بطلبي هذا والمتمثل في تزويد إقامتنا بقائمة العتاد والمستلزمات المبينة في الجدول أدناه :
     </div>
 
-    <!-- الجدول: 13 خانة فارغة وقابلة للكتابة والتعديل المباشر -->
+    <!-- الجدول بـ 11 خاناً مطابقاً تماماً لصورة الوورد -->
     <table>
         <thead>
             <tr>
-                <th style="width: 12%;">الرقم</th>
-                <th style="width: 63%;">العتاد</th>
+                <th style="width: 15%;">الرقم</th>
+                <th style="width: 60%;">العتاد</th>
                 <th style="width: 25%;">الكمية</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>01</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>02</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>03</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>04</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>05</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>06</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>07</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>08</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>09</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>10</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>11</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>12</td><td><input type="text"></td><td><input type="text"></td></tr>
-            <tr><td>13</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>01</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>02</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>03</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>04</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>05</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>06</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>07</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>08</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>09</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>10</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
+            <tr><td>11</td><td><input type="text" value="..."></td><td><input type="text" value="..."></td></tr>
         </tbody>
     </table>
 
